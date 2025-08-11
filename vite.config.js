@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Ganti 'veo3-react' sesuai nama repository kamu di GitHub
+// Ganti 'veo3-react' dengan nama repo kamu
 export default defineConfig({
   base: '/veo3-react/',
   plugins: [react()],
