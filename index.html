@@ -1,13 +1,28 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veo3 Web UI — React + Tailwind</title>
+    <title>Veo3 Web UI â€” React + Tailwind</title>
     <meta name="description" content="UI React + Tailwind untuk generate video via Veo 3 / Veo 3 Fast.">
   </head>
   <body class="bg-slate-950 text-slate-100">
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Force default provider = Proxy + base URL -->
+<script>
+(function () {
+  const url = 'https://veo3-combined-proxy.anggimh102.workers.dev/api';
+  try {
+    localStorage.setItem('veo3-settings', JSON.stringify({
+      provider: 'proxy',
+      proxyBaseUrl: url,
+      apiKey: ''
+    }));
+  } catch (e) {}
+  window.__VEO3_DEFAULTS__ = { provider: 'proxy', proxyBaseUrl: url };
+})();
+</script>
+<script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
