@@ -1,0 +1,6 @@
+name = "veo3-proxy"
+main = "api-examples/cloudflare-worker-proxy.js"
+compatibility_date = "2024-12-01"
+
+[vars]
+# Simpan secret via: `wrangler secret put KIE_API_KEY`
