@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Ubah base saat deploy ke GitHub Pages project pages: base: '/NAMA_REPO/'
+// ganti 'veo3-react' dengan nama repo kamu
 export default defineConfig({
+  base: '/veo3-react/',
   plugins: [react()],
-  // base: '/veo3-react/',
 })
+
